@@ -1,0 +1,105 @@
+.filter {
+  position: absolute;
+  left: 10.73%;
+  right: 65.1%;
+  top: 11.85%;
+  bottom: 69.48%;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.count {
+  position: absolute;
+  width: 192px;
+  height: 12px;
+  left: 123px;
+  top: 180px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height, or 100% */
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #4A4A4A;
+}
+
+.first {
+  position: absolute;
+  width: 142px;
+  height: 20px;
+  left: 123px;
+  top: 212px;
+}
+
+.second {
+  position: absolute;
+  width: 232px;
+  height: 40px;
+  left: 103px;
+  top: 242px;
+}
+
+.third {
+  position: absolute;
+  width: 142px;
+  height: 20px;
+  left: 123px;
+  top: 292px;
+}
+
+.fourth {
+  position: absolute;
+  width: 142px;
+  height: 20px;
+  left: 123px;
+  top: 332px;
+}
+
+.fifth {
+  position: absolute;
+  width: 142px;
+  height: 20px;
+  left: 123px;
+  top: 372px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 123px;
+  top: 212px;
+}
+
+.checkbox form {
+  position: absolute;
+  left: 12.81%;
+  right: 85.1%;
+  top: 15.7%;
+  bottom: 82.81%;
+  border: 1px solid #9ABBCE;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.all {
+  position: absolute;
+  width: 112px;
+  height: 20px;
+  left: 153px;
+  top: 212px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  /* identical to box height, or 154% */
+  display: flex;
+  align-items: center;
+  color: #4A4A4A;
+}

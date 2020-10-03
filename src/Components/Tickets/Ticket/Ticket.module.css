@@ -1,0 +1,18 @@
+.ticket {
+  position: absolute;
+  width: 502px;
+  height: 184px;
+  left: 355px;
+  top: 230px;
+}
+
+.rect {
+  position: absolute;
+  left: 355px;
+  right: 103px;
+  top: 230px;
+  bottom: 936px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
