@@ -6,7 +6,11 @@ export function ticketsList(props) {
     sort.costSort,
     sortTicketByCost,
     sortTicketByRate
-  ).filter((ticket) => filtersCount.includes(ticket.segments[0].stops.length));
+  ).filter(
+    (ticket) =>
+      filtersCount.includes(ticket.segments[0].stops.length) &&
+      filtersCount.includes(ticket.segments[1].stops.length)
+  );
 
   return ticketFilter.slice(0, 5);
 }
