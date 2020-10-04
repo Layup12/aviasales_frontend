@@ -1,14 +1,14 @@
 import React from "react";
-// import style from './Ticket.module.css';
-import "../../Main/Main.css";
-import TicketHeader from "./TicketInside/TicketHeader";
-import TicketContent from "./TicketInside/TicketContent";
+import "./Ticket.css";
+import TicketHeader from "./TicketContent/TicketHeader";
+import TicketContent from "./TicketContent/TicketContent";
 
 const Ticket = (props) => {
+  const { price, carrier, segments } = props.ticket;
   return (
     <div className="ticket">
-      <TicketHeader price={props.ticket.price} carrier={props.ticket.carrier} />
-      <TicketContent segments={props.ticket.segments} />
+      <TicketHeader price={price} carrier={carrier} />
+      <TicketContent segments={segments} />
     </div>
   );
 };

@@ -15,7 +15,7 @@ export function sortTicketByRateF(defaultTickets) {
 export function createArray(par, filter) {
   let array = [];
   for (let property in filter) {
-    if (property !== par && property !== "all") {
+    if (property !== par && property !== FILTER_FIELDS.ALL) {
       array.push(filter[property]);
     }
   }
@@ -23,13 +23,11 @@ export function createArray(par, filter) {
 }
 
 export function caseAll(name, filter) {
-  return {
-    ...Object.values(FILTER_FIELDS).reduce((acc, item) => {
-      acc[item] = !filter[name];
+  return Object.values(FILTER_FIELDS).reduce((acc, item) => {
+    acc[item] = !filter[name];
 
-      return acc;
-    }, {}),
-  };
+    return acc;
+  }, {});
 }
 
 export function caseAnother(name, filter, array) {

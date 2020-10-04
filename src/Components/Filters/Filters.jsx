@@ -1,12 +1,16 @@
 import React from "react";
-// import style from './Filter.module.css';
-import "../Main/Main.css";
+import "./Filters.css";
 import Filter from "./Filter/Filter";
 
 const Filters = (props) => {
-  const parseFilterInput = Object.keys(props.filter).map((el) => {
+  const parseFilterInput = Object.keys(props.filter).map((el, index) => {
     return (
-      <Filter filter={props.filter} el={el} changeFilter={props.changeFilter} />
+      <Filter
+        filter={props.filter}
+        el={el}
+        index={index}
+        changeFilter={props.changeFilter}
+      />
     );
   });
 

@@ -11,7 +11,11 @@ export function ticketsList(props) {
   return ticketFilter.slice(0, 5);
 }
 
-export function insideFilter(filter) {
+export function formatPrice(price) {
+  return `${Math.trunc(price / 1000)} ${("00" + (price % 1000)).substr(-3)} Р`;
+}
+
+function insideFilter(filter) {
   if (filter.all) {
     return [0, 1, 2, 3, 4, 5];
   }
@@ -24,9 +28,6 @@ export function insideFilter(filter) {
     }, []);
 }
 
-export function ticketsSort(costSort, sortTicketByCost, sortTicketByRate) {
-  if (costSort === true) {
-    return sortTicketByCost;
-  }
-  return sortTicketByRate;
+function ticketsSort(costSort, sortTicketByCost, sortTicketByRate) {
+  return costSort ? sortTicketByCost : sortTicketByRate;
 }

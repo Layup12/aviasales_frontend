@@ -1,0 +1,4 @@
+.ticketContent {
+  display: flex;
+  flex-direction: column;
+}

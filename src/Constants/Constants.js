@@ -19,4 +19,21 @@ const SORT_LABELS = {
   rateSort: "Самый быстрый",
 };
 
-export { FILTER_FIELDS, FILTER_LABELS, SORT_LABELS };
+const MINUTES_PER_HOUR = 60;
+
+const MINUTES_PER_DAY = 1440;
+
+const TRANSPLANT_CASES = {
+  [FILTER_FIELDS.ZERO]: "пересадок",
+  [FILTER_FIELDS.ONE]: "пересадка",
+  [FILTER_FIELDS.ALL]: "пересадки",
+};
+
+export {
+  FILTER_FIELDS,
+  FILTER_LABELS,
+  SORT_LABELS,
+  MINUTES_PER_HOUR,
+  MINUTES_PER_DAY,
+  TRANSPLANT_CASES,
+};

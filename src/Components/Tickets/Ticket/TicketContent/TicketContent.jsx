@@ -1,12 +1,12 @@
 import React from "react";
-import "../../../Main/Main.css";
-import TicketWay from "./TicketContent/TicketWay";
+import "./TicketContent.css";
+import TicketDirection from "./TicketDirection/TicketDirection";
 
 const TicketContent = (props) => {
   return (
     <div className="ticketContent">
       {props.segments.map((segment) => (
-        <TicketWay segment={segment} />
+        <TicketDirection segment={segment} />
       ))}
     </div>
   );

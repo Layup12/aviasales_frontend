@@ -1,0 +1,19 @@
+.default {
+  color: #4a4a4a;
+  background: #ffffff;
+}
+
+.active {
+  color: #ffffff;
+  background: #2196f3;
+}
+
+.costSort {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.rateSort {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}

@@ -1,0 +1,24 @@
+.ticketHead {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 50px;
+  margin-bottom: 10px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 100% */
+  align-items: center;
+  color: #2196f3;
+}
+
+.carrierLogo {
+  margin-right: 10px;
+}
+
+.carrierLogo img {
+  height: 36;
+  width: 110;
+}

@@ -1,17 +1,11 @@
 import React from "react";
-import logo from "./../../logo.svg";
+import logo from "./../../Image/logo.svg";
 import "./Main.css";
 import Tabs from "../Tabs/Tabs";
 import Filters from "../Filters/Filters";
 import TicketsList from "../Tickets/TicketsList";
-import {
-  sortTicketByCostF,
-  sortTicketByRateF,
-  createArray,
-  caseAll,
-  caseAnother,
-} from "../../Helpers/forMain";
-import { FILTER_FIELDS } from "./../../Constants/Constants";
+import * as MainHelpers from "../../Helpers/forMain";
+import { FILTER_FIELDS } from "../../Constants/Constants";
 
 class Main extends React.Component {
   state = {
@@ -19,13 +13,10 @@ class Main extends React.Component {
     isLoaded: false,
     sortTicketByCost: [],
     sortTicketByRate: [],
-    filter: {
-      ...Object.values(FILTER_FIELDS).reduce((acc, item) => {
-        acc[item] = true;
-
-        return acc;
-      }, {}),
-    },
+    filter: Object.values(FILTER_FIELDS).reduce((acc, item) => {
+      acc[item] = true;
+      return acc;
+    }, {}),
     sort: {
       costSort: true,
       rateSort: false,
@@ -48,11 +39,12 @@ class Main extends React.Component {
                   ...result,
                   tickets: [...result.tickets],
                 };
-                console.log(sortTicketByRateV);
                 this.setState({
                   isLoaded: true,
-                  sortTicketByCost: sortTicketByCostF(result.tickets),
-                  sortTicketByRate: sortTicketByRateF(
+                  sortTicketByCost: MainHelpers.sortTicketByCostF(
+                    result.tickets
+                  ),
+                  sortTicketByRate: MainHelpers.sortTicketByRateF(
                     sortTicketByRateV.tickets
                   ),
                 });
@@ -79,10 +71,10 @@ class Main extends React.Component {
     const { filter } = this.state;
 
     if (name === FILTER_FIELDS.ALL) {
-      this.setState({ filter: caseAll(name, filter) });
+      this.setState({ filter: MainHelpers.caseAll(name, filter) });
     } else {
-      let array = createArray(name, filter);
-      this.setState({ filter: caseAnother(name, filter, array) });
+      let array = MainHelpers.createArray(name, filter);
+      this.setState({ filter: MainHelpers.caseAnother(name, filter, array) });
     }
   };
 
@@ -110,7 +102,6 @@ class Main extends React.Component {
       sortTicketByRate,
     } = this.state;
 
-    // Отрисовка страницы
     if (error) {
       return <div>Ошибка: {error.message}</div>;
     }
