@@ -5,7 +5,12 @@ import "../Main/Main.css";
 
 const TicketsList = (props) => {
   const pasrseTicketsList = ticketsList(props).map((ticket) => {
-    return <Ticket ticket={ticket} />;
+    return (
+      <Ticket
+        key={ticket.carrier + ticket.price + ticket.segments[0].date}
+        ticket={ticket}
+      />
+    );
   });
 
   return <div className="ticketBoard">{pasrseTicketsList}</div>;

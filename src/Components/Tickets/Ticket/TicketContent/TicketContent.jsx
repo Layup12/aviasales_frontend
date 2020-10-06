@@ -6,7 +6,10 @@ const TicketContent = (props) => {
   return (
     <div className="ticketContent">
       {props.segments.map((segment) => (
-        <TicketDirection segment={segment} />
+        <TicketDirection
+          key={segment.origin + segment.destination}
+          segment={segment}
+        />
       ))}
     </div>
   );

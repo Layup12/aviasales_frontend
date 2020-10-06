@@ -3,12 +3,12 @@ import "./Filters.css";
 import Filter from "./Filter/Filter";
 
 const Filters = (props) => {
-  const parseFilterInput = Object.keys(props.filter).map((el, index) => {
+  const parseFilterInput = Object.keys(props.filter).map((el) => {
     return (
       <Filter
+        key={el}
         filter={props.filter}
         el={el}
-        index={index}
         changeFilter={props.changeFilter}
       />
     );

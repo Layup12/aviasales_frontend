@@ -3,17 +3,16 @@ import "./Filter.css";
 import { FILTER_LABELS } from "../../../Constants/Constants";
 
 const Filter = (props) => {
-  const { el, index, filter, changeFilter } = props;
+  const { el, filter, changeFilter } = props;
   return (
     <div className="filter">
-      <label for={index}>
+      <label>
         <input
           type="checkbox"
-          id={index}
           name={el}
           value={FILTER_LABELS[el]}
           checked={filter[el]}
-          onClick={changeFilter}
+          onChange={changeFilter}
         ></input>
         <p>{FILTER_LABELS[el]}</p>
       </label>
